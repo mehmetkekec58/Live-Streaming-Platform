@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "./Navi.css";
-import { Button, Form, FormControl, Navbar } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Avatar from '@mui/material/Avatar';
@@ -10,12 +10,14 @@ import Typography from '@mui/material/Typography';
 import MenuItem from '@mui/material/MenuItem';
 import SearchIcon from '@mui/icons-material/Search';
 
+
+
 function Navi() {
   const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
 
 
-  const handleOpenUserMenu = (event: any) => {
+  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElUser(event.currentTarget);
   };
 
@@ -72,10 +74,12 @@ function Navi() {
                 onClose={handleCloseUserMenu}
               >
                 {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">{setting}</Typography>
+                  <MenuItem  key={setting} onClick={handleCloseUserMenu}>
+                    <Typography sx={{fontFamily:'Ubuntu'}} textAlign="center">{setting}</Typography>
                   </MenuItem>
+
                 ))}
+
               </Menu>
             </Box>
 
