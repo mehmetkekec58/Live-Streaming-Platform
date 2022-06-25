@@ -1,0 +1,80 @@
+.main {
+    height: 625px;
+}
+
+.viewers {
+    position: absolute;
+    top: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: rgb(231, 246, 14);
+    border-radius: 15px;
+    opacity: 80%;
+}
+
+.user-info {
+    position: absolute;
+    top: 170px;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 58px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    text-align: left;
+    font-family: 'Ubuntu';
+    fill-opacity: 80%;
+    flood-opacity: 80%;
+}
+
+.viewer {
+    margin-top: 15px;
+    color: black;
+    font-weight: bold;
+    font-family: 'Ubuntu';
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+.image{
+    border-radius: 3px;
+}
+.image :hover{
+    opacity: 0.5;
+}
+
+.title-and-username{
+    float: "left";
+    align-items: "left";
+    margin-left: "10px";
+    width: "100px";
+    height: "40px";
+    background-color: red;
+}
+.user{
+    color:white;
+    font-size:'10px'
+}
+::-webkit-scrollbar {
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px grey;
+    border-radius: 15px;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(182, 183, 176);
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555252;
+}
