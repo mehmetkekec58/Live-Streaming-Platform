@@ -1,13 +1,40 @@
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper/Paper';
+import styled from '@mui/material/styles/styled';
 import React from 'react'
-import Footer from '../../../components/app/footer/Footer';
+import Drawer from '../../../components/app/drawer/Drawer';
+import Main from '../../../components/app/main/Main';
 import Navi from '../../../components/app/navi/Navi';
 import "./Home.css";
 
 export default function Home() {
+  const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  }));
   return (
     <div>
       <Navi />
-      <h1 >Home Page</h1>
+ <Box sx={{ flexGrow: 1 }}>
+      <Grid container columns={16}>
+        <Grid item xs={3}>
+          <Item><Drawer /></Item>
+        </Grid>
+        <Grid item xs={13}>
+          <Item><Main/></Item>
+        </Grid>
+      </Grid>
+    </Box>
+      
+     
+     
+    
+  
+     
     </div>
 
   )
