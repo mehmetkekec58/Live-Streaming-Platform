@@ -9,6 +9,9 @@ import Menu from '@mui/material/Menu';
 import Typography from '@mui/material/Typography';
 import MenuItem from '@mui/material/MenuItem';
 import SearchIcon from '@mui/icons-material/Search';
+import SearchBar from '../search-bar/SearchBar';
+import Brand from '../brand/Brand';
+import ItemMenu from '../item-menu/ItemMenu';
 
 
 
@@ -39,55 +42,8 @@ function Navi() {
     <Navbar className='navi'>
       <div className='container1'>
         <div className='brand-div'>
-          <div style={{ float: 'left' }}>
-            <img
-              alt=""
-              src={logo}
-              width="40"
-              height="40"
-              className="d-inline-block"
-            />{'   '}
-            <text className='brand-name'>{brandName}</text>
-          </div>
-
-          <div style={{ float: 'right' }}>
-            <Box className='user' >
-              <Tooltip title={firstNameAndLastName}>
-                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt={firstNameAndLastName} src={photoUrl} />
-                </IconButton>
-              </Tooltip>
-              <Menu
-                sx={{ mt: '45px' }}
-                id="menu-appbar"
-                anchorEl={anchorElUser}
-                anchorOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                open={Boolean(anchorElUser)}
-                onClose={handleCloseUserMenu}
-              >
-                {settings.map((setting) => (
-                  <MenuItem  key={setting} onClick={handleCloseUserMenu}>
-                    <Typography sx={{fontFamily:'Ubuntu'}} textAlign="center">{setting}</Typography>
-                  </MenuItem>
-
-                ))}
-
-              </Menu>
-            </Box>
-
-            <IconButton size="large" className='search-icon' aria-label="search" color="inherit">
-              <SearchIcon />
-            </IconButton>
-
-          </div>
+       <Brand/>
+        <ItemMenu/>
         </div>
       </div>
     </Navbar>
