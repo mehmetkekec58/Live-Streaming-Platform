@@ -1,11 +1,23 @@
 .drawer-div{
     background-color: rgb(229, 230, 227);
-    height: calc(88vh)
+    height: calc(88vh);
+    overflow: scroll;
+    overflow-x: hidden;
     
 }
-.circle{
+.circle-green{
+    border-radius: 100%;
+    background-color: green;
+    height: 10px;
+    width: 10px;
+    float:left;
+    margin-top: 4px;
+}
+.circle-red{
     border-radius: 100%;
     background-color: red;
     height: 10px;
     width: 10px;
+    float:left;
+    margin-top: 4px;
 }
