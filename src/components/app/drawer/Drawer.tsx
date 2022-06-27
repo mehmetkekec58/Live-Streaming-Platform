@@ -1,41 +1,55 @@
+import React from 'react';
 import Box from '@mui/material/Box/Box';
-import Divider from '@mui/material/Divider/Divider';
 import List from '@mui/material/List/List';
 import ListItem from '@mui/material/ListItem/ListItem';
 import ListItemButton from '@mui/material/ListItemButton/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText/ListItemText';
-import InboxIcon from '@mui/icons-material/Inbox';
-import DraftsIcon from '@mui/icons-material/Drafts';
-import React from 'react';
 import "./Drawer.css";
 import Footer from '../footer/Footer';
-import { Avatar } from '@mui/material';
+import MyAvatarComponent from '../../../utilities/avatar-component/MyAvatarComponent';
+import { numberRounder } from '../../../helper/numberRounder';
+
+const data = [
+  {
+    fullName: "Murat kiraz",
+    viewers: 15000,
+  },
+  {
+    fullName: "Deniz Bozdağ",
+    viewers: 2351,
+  },
+  {
+    fullName: "Ceren Aksal",
+    viewers: 852,
+  }
+]
 
 function Drawer() {
   return (
     <div className='drawer-div'>
-      <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-        <nav aria-label="main mailbox folders">
+      <Box sx={{ width: '100%', bgcolor: 'white' }}>
+        <nav aria-label="main">
           <List>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <Avatar>M</Avatar>
-                </ListItemIcon>
-                <ListItemText primary="Murat" />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <Avatar>D</Avatar>
-                </ListItemIcon>
-                <ListItemText primary="Deniz Bozdağ" />
-              </ListItemButton>
-            </ListItem>
+            {data.map((e) => (
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                   <MyAvatarComponent fullName={e.fullName} />
+                  </ListItemIcon>
+                  <ListItemText primary={e.fullName} />
+                  <div className=''>
+                    <div className='circle'></div>
+                    <p>{numberRounder(e.viewers)}</p>
+                  </div>
+                </ListItemButton>
+              </ListItem>
+
+            ))}
+
           </List>
         </nav>
+
       </Box>
     </div>
 
