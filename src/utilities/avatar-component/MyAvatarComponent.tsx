@@ -22,7 +22,7 @@ const MyAvatarComponent: React.FC<Props> = ({ photoUrl, fullName, style }: Props
     <div>
       {photoUrl != null || photoUrl != undefined ?
         <Avatar style={style} alt={fullName} src={photoUrl}></Avatar> :
-        <Avatar style={{ ...style, backgroundColor: `${randomColor()}` }}>{selectFirstLetter(fullName)}</Avatar>}
+        <Avatar alt={fullName} style={{ ...style, backgroundColor: `${randomColor()}` }}>{selectFirstLetter(fullName)}</Avatar>}
     </div>
   )
 }
