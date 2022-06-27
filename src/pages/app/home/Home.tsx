@@ -12,15 +12,15 @@ export default function Home() {
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
     ...theme.typography.body2,
-    padding: theme.spacing(1),
+    padding: theme.spacing(0),
     textAlign: 'center',
     color: theme.palette.text.secondary,
   }));
   return (
-    <div>
+    <div className='app'>
       <Navi />
  <Box sx={{ flexGrow: 1 }}>
-      <Grid container columns={16}>
+      <Grid  container columns={16}>
         <Grid item xs={3}>
           <Item><Drawer /></Item>
         </Grid>
@@ -29,12 +29,7 @@ export default function Home() {
         </Grid>
       </Grid>
     </Box>
-      
-     
-     
-    
-  
-     
+ 
     </div>
 
   )
