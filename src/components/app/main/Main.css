@@ -1,5 +1,6 @@
 .main {
-    height: 625px;
+    height: 100%;
+    width: 100%;
 }
 
 .viewers {
@@ -19,15 +20,13 @@
     top: 170px;
     background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
-    height: 58px;
+    height: 60px;
     padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 20px;
     text-align: left;
     font-family: 'Ubuntu';
-    fill-opacity: 80%;
-    flood-opacity: 80%;
 }
 
 .viewer {
@@ -40,14 +39,13 @@
     padding-right: 5px;
 
 }
-.image{
+
+.image {
     border-radius: 3px;
-}
-.image :hover{
-    opacity: 0.5;
+
 }
 
-.title-and-username{
+.title-and-username {
     float: "left";
     align-items: "left";
     margin-left: "10px";
@@ -55,10 +53,17 @@
     height: "40px";
     background-color: red;
 }
-.user{
-    color:white;
-    font-size:'10px'
+
+.user {
+    color: white;
+    font-size: '10px'
 }
+
+.image-list {
+    width: 100%;
+    height: calc(88vh);
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 
