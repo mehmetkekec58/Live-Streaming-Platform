@@ -17,104 +17,126 @@ const data = [
   {
     fullName: "Murat kiraz",
     viewers: 15000,
+    liveStreamingEnable: true
   },
   {
     fullName: "Deniz Bozdağ",
-    viewers: 2351,
+    liveStreamingEnable: false,
   },
   {
     fullName: "Ceren Aksal",
     viewers: 852,
+    liveStreamingEnable: true
   },
   {
     fullName: "Murat kiraz",
-    viewers: 1500000,
+    liveStreamingEnable: false,
   },
   {
     fullName: "Deniz Bozdağ",
     viewers: 1241112,
+    liveStreamingEnable: true
   },
   {
     fullName: "Ceren Aksal",
     viewers: 852,
+    liveStreamingEnable: true
   },
   {
     fullName: "Murat kiraz",
     viewers: 15000,
+    liveStreamingEnable: true,
   },
   {
     fullName: "Deniz Bozdağ",
-    viewers: 2351,
+    liveStreamingEnable: false,
   },
   {
     fullName: "Ceren Aksal",
-    viewers: 852,
+    liveStreamingEnable: false,
   },
   {
     fullName: "Murat kiraz",
     viewers: 15000,
+    liveStreamingEnable: true
   },
   {
     fullName: "Deniz Bozdağ",
-    viewers: 2351,
+    liveStreamingEnable: false,
   },
   {
     fullName: "Ceren Aksal",
-    viewers: 852,
+    liveStreamingEnable: false,
   },
   {
     fullName: "Murat kiraz",
     viewers: 15000,
+    liveStreamingEnable: true
   },
   {
     fullName: "Deniz Bozdağ",
-    viewers: 2351,
+    liveStreamingEnable: false,
   },
   {
     fullName: "Ceren Aksal",
     viewers: 852,
+    liveStreamingEnable: true
   },
   {
     fullName: "Murat kiraz",
-    viewers: 15000,
+    liveStreamingEnable: false,
   },
   {
     fullName: "Deniz Bozdağ",
-    viewers: 2351,
+    liveStreamingEnable: false,
   },
   {
     fullName: "Ceren Aksal",
     viewers: 852,
+    liveStreamingEnable: true
   },
   {
     fullName: "Murat kiraz",
-    viewers: 15000,
+    liveStreamingEnable: false,
   },
   {
     fullName: "Deniz Bozdağ",
     viewers: 2351,
+    liveStreamingEnable: true
   },
   {
     fullName: "Ceren Aksal",
-    viewers: 852,
+    liveStreamingEnable: false,
   },
 ]
-function screenHeight():number {
-  return screen.height;
-  
+function SubscriberList(data: any[]) {
+  let activeList = [];
+  let passiveList = [];
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].liveStreamingEnable) {
+      activeList[activeList.length] = data[i]
+    } else {
+      passiveList[passiveList.length] = data[i]
+    }
+  }
+
+  activeList.sort(function (a, b) {
+    return b.viewers - a.viewers;
+  })
+  return activeList.concat(passiveList);
 }
 
 function Drawer() {
   return (
     <div className='drawer-div'>
       <Box sx={{ bgcolor: 'white' }}>
-      <List>
+        <List>
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
-              <ListItemText  primary="Ana Sayfa" />
+              <ListItemText primary="Ana Sayfa" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
@@ -126,26 +148,26 @@ function Drawer() {
             </ListItemButton>
           </ListItem>
         </List>
-          <List>
-            <Divider />
-            <span style={{ float: 'left', marginTop: '5px', marginLeft: '15px', fontSize: '20px', fontWeight: 'bold', fontFamily: 'Ubuntu' }}>Abonelikler</span>
-            {data.map((e) => (
-              <ListItem disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                    <MyAvatarComponent fullName={e.fullName} />
-                  </ListItemIcon>
-                  <ListItemText primary={e.fullName} />
-                  <div className=''>
-                    <div className='circle-green'></div>
-                    <p style={{float:'right', marginLeft:'5px'}}>{numberRounder(e.viewers)}</p>
-                  </div>
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
-          <Divider/>
-    <Footer/>
+        <List>
+          <Divider />
+          <span style={{ float: 'left', marginTop: '5px', marginLeft: '15px', fontSize: '20px', fontWeight: 'bold', fontFamily: 'Ubuntu' }}>Abonelikler</span>
+          {SubscriberList(data).map((e) => (
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <MyAvatarComponent fullName={e.fullName} />
+                </ListItemIcon>
+                <ListItemText primary={e.fullName} />
+                <div className=''>
+                  <div className={e.liveStreamingEnable ? "circle-green" : "circle-red"}></div>
+                  <p style={{ float: 'right', marginLeft: '5px' }}>{e.viewers != null && e.viewers != undefined ? numberRounder(e.viewers) : ""}</p>
+                </div>
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+        <Divider />
+        <Footer />
       </Box>
     </div>
 
