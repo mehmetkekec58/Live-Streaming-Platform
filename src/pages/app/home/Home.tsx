@@ -47,7 +47,7 @@ export default function Home() {
 
   return (
     <div className='app'>
-      <Navi />
+      
       <Box sx={{ flexGrow: 1 }}>
         {drawerClose == false ? name() : name1()}
       </Box>
