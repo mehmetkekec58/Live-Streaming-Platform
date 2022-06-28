@@ -108,7 +108,7 @@ function Main() {
     <div style={{ width: '100%', height: `${screenHeight()}` }}>
       <ImageList cols={3} rowHeight={230} className="image-list" sx={{ width: '100%', height: `${screenHeight()}` }}>
         {itemData.map((item) => (
-          <MyVideoPhotoAndUserComponent item={item}></MyVideoPhotoAndUserComponent>
+          <MyVideoPhotoAndUserComponent key={item.id} item={item}></MyVideoPhotoAndUserComponent>
         ))}
       </ImageList></div>
   )
