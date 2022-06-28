@@ -97,17 +97,18 @@ const itemData = [
     fullName: "Kasım Ekrem Demir",
   },
 ];
-function screenHeight():number {
+
+function screenHeight(): number {
   return screen.height;
-  
+
 }
 
 function Main() {
   return (
-    <div style={{width:'100%', height:`${screenHeight()}`}}>
+    <div style={{ width: '100%', height: `${screenHeight()}` }}>
       <ImageList cols={3} rowHeight={230} className="image-list" sx={{ width: '100%', height: `${screenHeight()}` }}>
         {itemData.map((item) => (
-           <MyVideoPhotoAndUserComponent item={item}></MyVideoPhotoAndUserComponent>
+          <MyVideoPhotoAndUserComponent item={item}></MyVideoPhotoAndUserComponent>
         ))}
       </ImageList></div>
   )
