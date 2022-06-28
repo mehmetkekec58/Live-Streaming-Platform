@@ -1,0 +1,23 @@
+.video-search-list {
+    width: 100%;
+    padding-left: 60px;
+
+}
+
+.search-image-list {
+    float: left;
+}
+
+.search-image-list-info {
+    float: left;
+    margin-left: 10px;
+}
+
+.search-list-span {
+    font-family: 'Ubuntu';
+}
+
+.video-search-list-title {
+    font-size: larger;
+    font-weight: bolder;
+}
