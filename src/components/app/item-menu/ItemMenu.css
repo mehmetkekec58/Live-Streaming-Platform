@@ -2,9 +2,10 @@
     float: right;
     border: 2px solid rgb(175, 170, 170);
     border-radius: 100%;
-    margin-right: 10px;
+    margin-right: 20px;
 
 }
+
 .search-icon {
     float: right;
     right: 15px;

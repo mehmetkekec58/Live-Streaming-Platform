@@ -28,45 +28,43 @@ function ItemMenu() {
         setAnchorElUser(null);
     };
     return (
-      
-            <div style={{ float: 'right' }}>
-                <Box className='user' >
-                    <Tooltip title={firstNameAndLastName}>
-                        <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                            <Avatar alt={firstNameAndLastName} src={photoUrl} />
-                        </IconButton>
-                    </Tooltip>
-                    <Menu
-                        sx={{ mt: '45px' }}
-                        id="menu-appbar"
-                        anchorEl={anchorElUser}
-                        anchorOrigin={{
-                            vertical: 'top',
-                            horizontal: 'right',
-                        }}
-                        keepMounted
-                        transformOrigin={{
-                            vertical: 'top',
-                            horizontal: 'right',
-                        }}
-                        open={Boolean(anchorElUser)}
-                        onClose={handleCloseUserMenu}
-                    >
-                        {settings.map((setting) => (
-                            <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                <Typography sx={{ fontFamily: 'Ubuntu' }} textAlign="center">{setting}</Typography>
-                            </MenuItem>
 
-                        ))}
+        <div style={{ float: 'right' }}>
+            <Box className='user' >
+                <Tooltip title={firstNameAndLastName}>
+                    <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                        <Avatar alt={firstNameAndLastName} src={photoUrl} />
+                    </IconButton>
+                </Tooltip>
+                <Menu
+                    sx={{ mt: '45px' }}
+                    id="menu-appbar"
+                    anchorEl={anchorElUser}
+                    anchorOrigin={{
+                        vertical: 'top',
+                        horizontal: 'right',
+                    }}
+                    keepMounted
+                    transformOrigin={{
+                        vertical: 'top',
+                        horizontal: 'right',
+                    }}
+                    open={Boolean(anchorElUser)}
+                    onClose={handleCloseUserMenu}
+                >
+                    {settings.map((setting) => (
+                        <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                            <Typography sx={{ fontFamily: 'Ubuntu' }} textAlign="center">{setting}</Typography>
+                        </MenuItem>
 
-                    </Menu>
-                </Box>
+                    ))}
 
-                <IconButton size="large" className='search-icon' aria-label="search" color="inherit">
-                    <SearchIcon />
-                </IconButton>
+                </Menu>
+            </Box>
 
-            </div>    
+
+
+        </div>
     )
 }
 
