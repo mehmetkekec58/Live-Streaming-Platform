@@ -4,3 +4,18 @@
     font-weight: bold;
     margin-left: 10px;
 }
+
+.brand {
+    float: left;
+
+}
+
+.button {
+    font-size: small;
+    margin-right: 5px;
+    background-color: black;
+}
+
+.brand-img {
+    margin-left: 4px;
+}
