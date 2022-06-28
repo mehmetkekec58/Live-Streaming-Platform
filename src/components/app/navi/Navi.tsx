@@ -16,35 +16,13 @@ import ItemMenu from '../item-menu/ItemMenu';
 
 
 function Navi() {
-  const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-  const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
-
-
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
-  let firsName: string = "Nagehan";
-  let lastName: string = "Uzun";
-  let firstNameAndLastName: string = firsName + " " + lastName;
-  let logo: string = "https://icon-library.com/images/icon-png-logos/icon-png-logos-7.jpg";
-  let photoUrl: string = "https://play-lh.googleusercontent.com/I-Yd5tJnxw7Ks8FUhUiFr8I4kohd9phv5sRFHG_-nSX9AAD6Rcy570NBZVFJBKpepmc";
-  let brandName: string = "Canlı Yayın Platformu";
-
-
 
   return (
     <Navbar className='navi'>
-      <div className='container1'>
-        <div className='brand-div'>
-       <Brand/>
-        <ItemMenu/>
-        </div>
+      <div className='navi-div'>
+        <Brand />
+        <SearchBar />
+        <ItemMenu />
       </div>
     </Navbar>
 
