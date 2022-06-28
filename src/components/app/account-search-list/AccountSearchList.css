@@ -1,0 +1,45 @@
+.account-list {
+    padding-left: 10px;
+    height: 150px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.followers {
+    margin-left: 20px;
+    font-family: 'Ubuntu';
+}
+
+.full-name {
+    margin-left: 20px;
+    font-size: larger;
+    font-weight: bolder;
+    font-family: 'Ubuntu';
+}
+
+.about-me {
+    margin-left: 20px;
+    font-family: 'Ubuntu';
+}
+
+.info {
+    float: left;
+    height: 120px;
+    text-align: center;
+    padding-top: 10px;
+    width: 80%;
+    text-align: left;
+
+}
+
+.image-profile-search {
+    border-radius: 100%;
+
+}
+
+.image-div {
+    float: left;
+
+}
