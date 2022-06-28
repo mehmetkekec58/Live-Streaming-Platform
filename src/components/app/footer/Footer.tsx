@@ -12,23 +12,28 @@ import { Divider } from '@mui/material';
 
 const data = [
   {
+    id:1,
     text: "Gizlilik Sözleşmesi",
     link: "#",
   },
   {
+    id:2,
     text: "Çerezler",
     link: "#",
   },
   {
+    id:3,
     text: "Reklam Ver",
     link: "#",
   },
 
   {
+    id:4,
     text: "Bize Ulaşın",
     link: "#",
   },
   {
+    id:5,
     text: "Geri Bildirim",
     link: "#",
   },
@@ -42,7 +47,7 @@ function Footer() {
         <List>
           {data.map((e) => (
 
-            <ListItem disablePadding>
+            <ListItem disablePadding key={e.id}>
               <ListItemButton>
                 <ListItemText primary={e.text} />
               </ListItemButton>

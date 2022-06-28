@@ -15,97 +15,91 @@ import TrendingIcon from '@mui/icons-material/TrendingUp';
 
 const data = [
   {
+    id:1,
     fullName: "Murat kiraz",
     viewers: 15000,
     liveStreamingEnable: true
   },
   {
+    id:2,
     fullName: "Deniz Bozdağ",
     liveStreamingEnable: false,
   },
   {
+    id:3,
     fullName: "Ceren Aksal",
     viewers: 852,
     liveStreamingEnable: true
   },
   {
+    id:4,
     fullName: "Murat kiraz",
     liveStreamingEnable: false,
   },
   {
+    id:5,
     fullName: "Deniz Bozdağ",
     viewers: 1241112,
     liveStreamingEnable: true
   },
   {
+    id:6,
     fullName: "Ceren Aksal",
     viewers: 852,
     liveStreamingEnable: true
   },
   {
+    id:7,
     fullName: "Murat kiraz",
     viewers: 15000,
     liveStreamingEnable: true,
   },
   {
+    id:8,
     fullName: "Deniz Bozdağ",
     liveStreamingEnable: false,
   },
   {
+    id:9,
     fullName: "Ceren Aksal",
     liveStreamingEnable: false,
   },
   {
+    id:10,
     fullName: "Murat kiraz",
     viewers: 15000,
     liveStreamingEnable: true
   },
   {
+    id:11,
     fullName: "Deniz Bozdağ",
     liveStreamingEnable: false,
   },
   {
+    id:12,
     fullName: "Ceren Aksal",
     liveStreamingEnable: false,
   },
   {
+    id:13,
     fullName: "Murat kiraz",
     viewers: 15000,
     liveStreamingEnable: true
   },
   {
+    id:14,
     fullName: "Deniz Bozdağ",
     liveStreamingEnable: false,
   },
   {
+    id:15,
     fullName: "Ceren Aksal",
     viewers: 852,
     liveStreamingEnable: true
   },
   {
+    id:16,
     fullName: "Murat kiraz",
-    liveStreamingEnable: false,
-  },
-  {
-    fullName: "Deniz Bozdağ",
-    liveStreamingEnable: false,
-  },
-  {
-    fullName: "Ceren Aksal",
-    viewers: 852,
-    liveStreamingEnable: true
-  },
-  {
-    fullName: "Murat kiraz",
-    liveStreamingEnable: false,
-  },
-  {
-    fullName: "Deniz Bozdağ",
-    viewers: 2351,
-    liveStreamingEnable: true
-  },
-  {
-    fullName: "Ceren Aksal",
     liveStreamingEnable: false,
   },
 ]
@@ -152,7 +146,7 @@ function Drawer() {
           <Divider />
           <span style={{ float: 'left', marginTop: '5px', marginLeft: '15px', fontSize: '20px', fontWeight: 'bold', fontFamily: 'Ubuntu' }}>Abonelikler</span>
           {SubscriberList(data).map((e) => (
-            <ListItem disablePadding>
+            <ListItem disablePadding key={e.id}>
               <ListItemButton>
                 <ListItemIcon>
                   <MyAvatarComponent fullName={e.fullName} />
