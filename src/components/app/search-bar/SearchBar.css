@@ -1,0 +1,10 @@
+.search {
+    width: 30%;
+    position: absolute;
+    left: calc(81vw/2);
+
+}
+
+.button {
+    color: antiquewhite;
+}
