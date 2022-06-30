@@ -10,26 +10,11 @@ import './Search.css';
 
 function Search() {
  const [searchParams, getSearchParams] = useSearchParams();
- 
-
-  const Item = styled(Paper)(({ theme }) => ({
-    textAlign: 'center',
-
-  }));
 
   return (
     <div className='search-page'>
       {/* hey {searchParams.get("q")} */}
-      <Grid container columns={16}>
-      <Grid item xs={3}>
-        <Item ><Drawer /></Item>
-      </Grid>
-      <Grid item xs={13}>
-        <Item><SearchList/></Item>
-      </Grid>
-    </Grid>
-      
-    
+      <SearchList/>
     </div>
   )
 
