@@ -1,23 +1,81 @@
-.video-search-list {
-    width: 100%;
-    padding-left: 60px;
+.video-search-list-div {
+    height: 53%;
+    margin: 10px 10px 10px 5%;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    overflow-x: scroll;
 
 }
 
-.search-image-list {
-    float: left;
+.video-img-style {
+    border-radius: 5px;
+    background-color: red;
+
 }
 
-.search-image-list-info {
-    float: left;
-    margin-left: 10px;
+.video-search-live-background-color {
+    background-color: red;
+    height: 25px;
+    width: 35px;
+    position: absolute;
+    display: flex;
+    margin: 5px 5px 0px 5px;
+    padding-right: 10px;
+    padding-left: 2px;
+    padding-top: 1px;
+    border-radius: 6px;
+
 }
 
-.search-list-span {
+.video-image-and-live {
+    position: relative;
+    display: flex;
+
+    margin: 0px 10px 0px 10px;
+
+}
+
+.search-list-live-text {
+    position: absolute;
+    color: white;
+    font-size: small;
+    font-weight: bold;
+    font-family: 'Ubuntu';
+}
+
+.video-search-list-card-info {
+    flex-direction: column;
+    text-align: left;
+    background-color: rgb(205, 204, 204);
+    border: 1px black solid;
+    border-radius: 5px;
+    margin: 8px 8px 8px 8px;
+}
+
+ul {
+    list-style-type: none;
+    text-align: left;
+
+}
+
+ul li {
+    padding-top: 8px;
     font-family: 'Ubuntu';
 }
 
 .video-search-list-title {
     font-size: larger;
-    font-weight: bolder;
+    font-weight: bold;
+}
+
+.general-div {}
+
+.general-div:hover {
+    opacity: 0.7;
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+    height: 8px;
 }
