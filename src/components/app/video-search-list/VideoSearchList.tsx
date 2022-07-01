@@ -95,62 +95,32 @@ const itemData = [
     fullName: "Serkan Serlik",
   },
 ]
-const item = itemData[0];
 
 function VideoSearchList() {
   return (
-<div>
-  <span style={{textAlign:'left',fontFamily:'Ubuntu'}}>Canlı Yayınlar</span>
-<div className='video-search-list-div'>
-{itemData.map((item) =>(
+    <div>
+      <span style={{ textAlign: 'left', fontFamily: 'Ubuntu' }}>Canlı Yayınlar</span>
+      <div className='video-search-list-div'>
+        {itemData.map((item) => (
 
-<div className='general-div'>
-<div className='video-image-and-live'>
-<img className='video-img-style' src={item.videoThumbnail} width="250px" height="150px"/>
-<div className='video-search-live-background-color'><span className='search-list-live-text'>{LIVE}</span></div>
-</div>
-<div className='video-search-list-card-info'>
-  <ul>
-<li className='video-search-list-title'>{item.title}</li>
-<li className='video-search-list-category'>VALORANT</li>
-<li className='video-search-list-fullName'>{item.fullName}</li>
-<li className='video-search-list-viewers'>{numberRounder(item.viewers)} {VIEWER}</li>
-</ul>
-</div>
-  </div>
+          <div className='general-div'>
+            <div className='video-image-and-live'>
+              <img className='video-img-style' src={item.videoThumbnail} width="250px" height="150px" />
+              <div className='video-search-live-background-color'><span className='search-list-live-text'>{LIVE}</span></div>
+            </div>
+            <div className='video-search-list-card-info'>
+              <ul>
+                <li className='video-search-list-title'>{item.title}</li>
+                <li className='video-search-list-category'>VALORANT</li>
+                <li className='video-search-list-fullName'>{item.fullName}</li>
+                <li className='video-search-list-viewers'>{numberRounder(item.viewers)} {VIEWER}</li>
+              </ul>
+            </div>
+          </div>
 
-))}
-
-  
-
- </div>
- </div>
-
-//     <div className='video-search-list'>
-//       {/* {itemData.map((item) => (
-//           <MyVideoPhotoAndUserComponent key={item.id} item={item}></MyVideoPhotoAndUserComponent>
-//         ))} */}
-// {itemData.map((item) =>(
-//   <div className='video-search-margin'>
-//         <div className='search-image-list-div'>
-//           <img className='search-image-list' width="150px" height="100px" src={item.videoThumbnail} />
-//           <div className='live-background-color'><span className='live-span'>{LIVE}</span></div>
-//         </div><div className='search-image-list-info'>
-//             <span className='search-list-span video-search-list-title'>{item.title}</span>
-//             <br />
-//             <span className='search-list-span'>Valorant</span>
-//             <br />
-//             <span className='search-list-span'>{item.fullName}</span>
-//             <br />
-//             <span className='search-list-span'>{numberRounder(item.viewers)} {VIEWER}</span>
-//           </div>
-//           </div>
-
-
-// ))}
-
-
-//     </div>
+        ))}
+      </div>
+    </div>
   )
 }
 
