@@ -1,0 +1,58 @@
+.video-container{
+    display: flex;
+    position: relative;
+    width: 100%;
+    align-items: flex-end;
+    overflow-y: scroll;
+    
+}
+.play-pause-button{
+    position: absolute;
+    color: white;
+    top: 90%;
+    left: 8px;
+    
+}
+.video-fullscreen-button{
+    position:absolute;
+    color: white;
+    top: 90%;
+    left: 95%
+}
+.video-class{
+    width: 100%;
+    height: 480px;
+    display: flex;
+ 
+
+  
+    
+}
+.video-quality-button{
+    background-color: rgb(149, 143, 143,0.5);
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 90%;
+    left: 84%;
+    color: white;
+}
+
+audio::-webkit-media-controls-timeline,
+video::-webkit-media-controls-timeline {
+    display: none;
+}
+
+.video-volume{
+position: absolute;
+color: white;
+top: 90%;
+left: 65%
+}
+.video-buttons{
+    opacity: 0;
+  
+}
+.video-buttons:hover{
+    opacity: 0.9;
+}
