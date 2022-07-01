@@ -10,8 +10,9 @@ let brandName: string = "Canlı Yayın Platformu";
 function Brand() {
   return (
     <div className="brand">
-      <Link to="/" style={{textDecoration:'none'}}>
+    
       <Button className='button'><HomeIcon style={{ color: 'grey' }} /></Button>
+      <Link to="/" style={{textDecoration:'none'}}>
       <img
         alt="Canlı Yayın Platformu"
         src={logo}
