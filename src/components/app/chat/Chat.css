@@ -1,0 +1,56 @@
+.chat-container {
+    height: 83vh;
+    margin: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
+ 
+    overflow-y: scroll;
+    background-color: antiquewhite;
+}
+
+.message-right {
+    margin: 20px 20px 20px 20px;
+
+    height: 40px;
+    
+   
+}
+
+.message-left {
+    margin: 20px 20px 20px 20px;
+ 
+    height: 40px;
+   
+}
+
+.message-text-for-message-left {
+    margin-left: 5px;
+    margin-top: 10px;
+    font-size: small;
+  
+}
+
+.message-text-for-message-right {
+    margin-right: 5px;
+    margin-top: 10px;
+    font-size: small;
+}
+
+.div-for-message-left {
+    
+    font-size: small;
+  
+  
+}
+
+.div-for-message-right {
+ 
+    font-size: small;
+  
+
+   
+}
+.general-message-container{
+    margin: 20px 1px 20px 1px;
+    flex-direction: column;
+    
+}
