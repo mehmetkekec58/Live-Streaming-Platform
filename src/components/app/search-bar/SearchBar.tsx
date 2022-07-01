@@ -4,9 +4,14 @@ import FormControl from 'react-bootstrap/esm/FormControl';
 import InputGroup from 'react-bootstrap/esm/InputGroup';
 import SearchIcon from '@mui/icons-material/Search';
 import './SearchBar.css';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
+const containsUrl: string = "search?q=";
+const enter: string = "Enter";
 
+function searchEmptyOrNull(searchText: string): boolean {
+    return searchText != "" && searchText != null;
+}
 
 function SearchBar() {
     let navigate = useNavigate();
@@ -17,9 +22,9 @@ function SearchBar() {
     }
 
     const handleKeyDown = (event: React.KeyboardEvent<HTMLElement>) => {
-        if (event.key === 'Enter') {
-            if (search != "" && search != null) {
-                navigate(`search?q=${search}`)
+        if (event.key === enter) {
+            if (searchEmptyOrNull(search)) {
+                navigate(`${containsUrl}${search}`)
             }
 
         }
@@ -33,8 +38,8 @@ function SearchBar() {
                     onChange={OnChange}
                     onKeyDown={handleKeyDown}
                 />
-                {search != "" && search != null ?
-                    <Link to={`/search?q=${search}`}>
+                {searchEmptyOrNull(search) ?
+                    <Link to={`/${containsUrl}${search}`}>
                         <Button variant='light' className='button'>
                             <SearchIcon />
                         </Button>
