@@ -8,6 +8,7 @@ import Grid from '@mui/material/Grid/Grid';
 import styled from '@mui/material/styles/styled';
 import Paper from '@mui/material/Paper/Paper';
 import Drawer from './components/app/drawer/Drawer';
+import Stream from './pages/app/stream/Stream';
 
 const Item = styled(Paper)(({ theme }) => ({
   textAlign: 'center',
@@ -32,6 +33,7 @@ function App() {
           <Routes>
       <Route path='' element={<Home />} /> 
       <Route path='search' element={<Search/>} />
+      <Route path='stream' element={<Stream/>} />
     </Routes>
     </Item>
       </Grid>
